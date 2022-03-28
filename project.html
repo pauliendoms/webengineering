@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Paulien Doms</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <link rel="shortcut icon" href="assets/octopus.ico" type="image/x-icon">
+    <script src="js/jquery.js"></script>
+    <script>
+        $("document").ready(function() {
+            var i = 1;
+
+            $("#vorige").click(function() {
+                if (i == 1) {
+                    i = 9;
+                } else {
+                    i -= 1;
+                }
+
+                var bron = "assets/slideshow/slideshow" + i + ".jpg";
+                $("#fotoSlideshow").attr("src", bron);
+            });
+
+            $("#volgende").click(function() {
+                if (i == 9) {
+                    i = 1;
+                } else {
+                    i += 1;
+                }
+
+                var bron = "assets/slideshow/slideshow" + i + ".jpg";
+                $("#fotoSlideshow").attr("src", bron);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1 id="title"><a href="index.html" class="orangered">PAULIEN DOMS</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="currentPage"><a href="project.html">PROJECT</a></li>
+                    <li><a href="about.html">OVER MIJ</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="middle">
+            <div class="poster">
+                <div class="smss">
+                    <img src="assets/FileLogo.png" alt="File Logo" class="FileLogo"/>
+                    <h2>Study Material Sharing Server</h2>
+                </div>
+                <div class="doel">
+                    <img src="assets/blockschema.jpg" alt="Blokschema" class="ProjectFoto"/>
+                    <div class="ProjectText">   
+                        <h2>Doel van het project</h2>
+                        <p>
+                            Ik ben Paulien Doms en voor de richting Elektronica-ICT heb ik dit project samen met een klasgenoot gemaakt. Het doel van het project is om een manier aan te bieden waarmee studenten makkelijk materiaal met elkaar kunnen delen.
+                            Belangrijk hierbij was om ervoor te zorgen dat het even toegangkelijk is als alle andere communicatie van studenten onder 
+                            elkaar. Daarom hebben we besloten om een Discord Bot te maken, waardoor een bestand delen even makkelijk is als gewoon een 
+                            berichtje sturen. Daarnaast is er ook een website gemaakt met de zelfde functies als de Discord Bot maar een meer uitgebreide 
+                            zoekfunctie. De grootste connectie tussen die twee onderdelen is de bestanden en de database waarin alle nodige informatie 
+                            over de bestanden wordt bijgehouden. Hieronder staat meer uitleg over de verschillende toepassingen en als je helemaal naar onder
+                            scrollt vind je een slideshow met screenshots en foto's van het project in werking.
+                        </p>
+                    </div>    
+                </div>
+                <div class="discordbot">
+                    <img src="assets/ScreenshotBot.png" alt="Discord Bot" class="ProjectFoto"/>
+                    <div class="ProjectText">    
+                        <h2>Discord Bot</h2>
+                    
+                        <p>
+                            De Discord bot werd al snel de hoofdtoepassing van het project omdat dit het onderdeel is dat het project origineel maakt, maar
+                            ook omdat het ervoor zorgt dat het project dicht bij de gebruikers ligt. Door een Discord bot te maken kunnen de bestanden gedeeld worden
+                            door berichten te sturen. De bot maakt gebruik van enkele commando's. Zo hoef je enkel "?upload" te sturen, met eventueel een beschrijving erachter,
+                            om een bestand te uploaden. Met het "?search"-commando krijg je snel een overzicht van de bestanden of kan je zoeken naar een specifiek bestand.
+                            Vervolgens kan een bestand ook makkelijk gedownload worden door een bestand te kiezen uit de lijst en dit mee te geven met het "?download"-commando.
+                            In de slideshow zie je dit proces stap voor stap.
+                        </p>
+                    </div>
+                </div>
+                <div class="website">
+                    <img src="assets/ScreenshotSite.png" alt="Discord Bot" class="ProjectFoto"/>
+                    <div class="ProjectText">
+                        <h2>Website</h2>
+                        <p>
+                            Een bestand downloaden via de Discord bot is erg makkelijk wanneer je weet welk bestand je nodig hebt. Als je echter niet meteen weet wat je zoekt,
+                            is het al iets makkelijker om tussen al die berichten het overzicht te verliezen. Daar komt de website in het spel. De website is een belangrijk deel
+                            van het project omdat deze een duidelijkere lijst van bestanden toont en een uitgebreide zoekfunctie heeft. Zo kan je gebruik maken van verschillende
+                            filters en een zoekterm mee geven. Voor de website is een account vereist, die je kan aanmaken via de Discord bot. 
+                        </p>
+                    </div> 
+                </div>
+                <div class="slideshow">
+                    <a class="pijltje" id="vorige">&#10094;</a>
+                    <img src="assets/slideshow/slideshow1.jpg" alt="Slideshow" id="fotoSlideshow"/>
+                    <a class="pijltje" id="volgende">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="clear">Copyright © Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele bachelor elektronica-ict – 2021</p>
+        </footer>
+    </div>  
+</body>
+</html>
